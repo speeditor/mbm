@@ -9,18 +9,7 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
                 'u:dev:Colors/code.js'
             ]
         });
-        var mbmbtn = mw.html.element('div', { id: 'p-mbm' }),
-            mbmvpt = mw.html.element('meta', {
-                         name: 'viewport',
-                         content: 'user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui'
-                     });
-        $('head').append(mbmvpt);
-        $('.skin-monobook').append(mbmbtn);
-        $('#p-mbm').append('mbm');
-        $('#p-mbm').click(function(mbmcore){
-            mbmcore.preventDefault();
-            $('.skin-monobook').toggleClass('mbm-on');
-        });
+        // variables & UI
         var navbtn = mw.html.element('div', { id: 'p-navicon' }),
             schbtn = mw.html.element('div', { id: 'p-schicon' }),
             wbgmbm = mw.html.element('div', { id: 'mbm-bg' }),
@@ -95,6 +84,21 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
                     $(this).css('height', $(this).parent().width()*0.75);
                 });
             }
+        });
+        // initialisation
+        window.mbmstate = false;
+        var mbmbtn = mw.html.element('div', { id: 'p-mbm' }),
+            mbmvpt = mw.html.element('meta', {
+                         name: 'viewport',
+                         content: 'user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui'
+                     });
+        $('head').append(mbmvpt);
+        $('.skin-monobook').append(mbmbtn);
+        $('#p-mbm').append('mbm');
+        $('#p-mbm').click(function(toggle) {
+            toggle.preventDefault();
+            window.mbmstate = window.mbmstate ? false : true;
+            $('.skin-monobook').toggleClass('mbm-on');
         });
         $('.skin-monobook').addClass('mbm-on');
     }
