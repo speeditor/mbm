@@ -1,2 +1,2 @@
-# mbm
-Mobile wrapper for FANDOM websites using Monobook.
+# Monobook Mobile (mbm)
+Monobook-dependent mobile wrapper for FANDOM websites.
