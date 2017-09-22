@@ -1,4 +1,4 @@
-// Monobook mobile wrapper (WIP)
+// Monobook Mobile main stylesheet
 // Main loader script for importing
 mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
     if ( skin !== 'monobook') { return }
