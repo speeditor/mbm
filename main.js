@@ -1,4 +1,5 @@
 // Monobook mobile wrapper (WIP)
+// Main loader script for importing
 mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
     if ( skin !== 'monobook') { return }
 
@@ -41,4 +42,5 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
     if (navigator.userAgent.indexOf('Mobi') > -1) {
         $('.skin-monobook').addClass('mbm-on');
     }
+
 });
