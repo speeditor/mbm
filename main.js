@@ -1,7 +1,8 @@
 // Monobook mobile wrapper (WIP)
 mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
-    // == dependencies ==
+    if ( skin !== 'monobook') { return }
 
+    // == dependencies ==
     // === CSS dependencies ===
     mw.hook('dev.colors').add(function(module) {
         dev.colors.css(
