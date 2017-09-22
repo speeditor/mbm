@@ -1,6 +1,5 @@
 /* Monobook Mobile main stylesheet */
 .skin-monobook.mbm-on {
-    background-image: url('/wiki/Special:FilePath/Wiki-background') !important;
     zoom: 1.25;
 }
 .skin-monobook #p-mbm {
@@ -117,7 +116,6 @@
 }
 .skin-monobook.mbm-on #column-one #p-logo a,
 .skin-monobook.mbm-on #column-one #p-logo a:hover {
-    background-image: url('/wiki/Special:FilePath/Wiki-wordmark.png') !important;
     height: 36px;
     width: 140px;
     background-size: contain;
