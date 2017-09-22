@@ -1,4 +1,4 @@
-// Monobook mobile wrapper (WIP)
+// Monobook Mobile core script
 // == global variables ==
 window.mbmstate = window.mbmstate ? true : false;
 
