@@ -39,6 +39,7 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
     
     // == initialisation ==
     importScriptURI('https://raw.github.com/speeditor/mbm/master/core.js');
+    importStylesheetURI('https://raw.github.com/speeditor/mbm/master/main.css');
     if (navigator.userAgent.indexOf('Mobi') > -1) {
         $('.skin-monobook').addClass('mbm-on');
     }
