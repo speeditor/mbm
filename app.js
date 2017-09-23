@@ -9,7 +9,7 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
         dev.colors.css(
         '.skin-monobook.mbm-on {' +
             'background-color: $body;' +
-            'background-image: url(\'/wiki/Special:FilePath/Wiki-background\') !important;' +
+            'background-image: url("/wiki/Special:FilePath/Wiki-background") !important;' +
         '}' +
         '.skin-monobook.mbm-on #column-content #mbm-bg {' +
             'background: $page;' +
@@ -26,7 +26,7 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
         '}' +
         '.skin-monobook.mbm-on #column-one #p-logo a,' +
         '.skin-monobook.mbm-on #column-one #p-logo a:hover {' +
-            'background-image: url(\'/wiki/Special:FilePath/Wiki-wordmark.png\') !important;' +
+            'background-image: url("/wiki/Special:FilePath/Wiki-wordmark.png") !important;' +
         '}'
         '.skin-monobook.mbm-on #globalWrapper a {' +
             'color: $link;' +
