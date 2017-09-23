@@ -42,8 +42,7 @@ var mbmvpt = mw.html.element('meta', {
 $('head').append(mbmvpt);
 $('#p-mbm').click(function(toggle) {
     toggle.preventDefault();
-    window.mbm.state = window.mbm.state ? false : true;
-    $('.skin-monobook').toggleClass('mbm-on');
+    mbm.toggle();
 });
 
 // == interface elements ==
@@ -79,8 +78,8 @@ $('#p-schicon').click(function(schmbm) {
 });
 $('#searchInput').attr('placeholder','Search the ' + wgSitename);
 // === wiki submenu navigation ===
-$('.portlet > h5').click(function(menumbm) {
-    menumbm.preventDefault();
+$('.portlet > h5').click(function(menu) {
+    menu.preventDefault();
     $(this).parent().toggleClass(viscls);
 });
 
