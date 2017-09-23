@@ -27,7 +27,7 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
         '.skin-monobook.mbm-on #column-one #p-logo a,' +
         '.skin-monobook.mbm-on #column-one #p-logo a:hover {' +
             'background-image: url("/wiki/Special:FilePath/Wiki-wordmark.png") !important;' +
-        '}'
+        '}' +
         '.skin-monobook.mbm-on #globalWrapper a {' +
             'color: $link;' +
         '}')
