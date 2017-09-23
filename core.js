@@ -19,13 +19,13 @@ window.mbm = {
         } else {
             !mbm.state ? mbm.on() : mbm.off();
         }
-    },
-    init: (function() {
-        if (navigator.userAgent.indexOf('Mobi') > -1) {
-            mbm.on();
-        }
-    }())
+    }
 };
+mbm.init = (function() {
+    if (navigator.userAgent.indexOf('Mobi') > -1) {
+        mbm.on();
+    }
+}());
 
 // == user interface ==
 var mbmbtn = mw.html.element('div', { id: 'p-mbm' }, 'mbm');
