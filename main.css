@@ -467,6 +467,12 @@
     clear: none !important;
     float: none !important;
 }
+.skin-monobook.mbm-on #mw-content-text .portable-infobox figure {
+	margin: 0;
+}
+.skin-monobook.mbm-on #mw-content-text .portable-infobox .pi-data-label:not(.pi-horizontal-group-item):not(.pi-smart-data-label) {
+	padding: 0;
+}
 .skin-monobook.mbm-on #mw-content-text > div {
     position: static !important;
 }
