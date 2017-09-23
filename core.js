@@ -1,6 +1,31 @@
 // Monobook Mobile core script
 // == global variables ==
-window.mbmstate = window.mbmstate ? true : false;
+window.mbm = {
+    state: false,
+    style:  $('link[href$="PortableInfoboxMonobook.scss"]'),
+    on: function() {
+        $('.skin-monobook').addClass('mbm-on');
+        mbm.style.detach();
+        mbm.state = true;
+    },
+    off: function() {
+        $('.skin-monobook').removeClass('mbm-on');
+        $('meta[name="ResourceLoaderDynamicStyles"]').before(mbm.style);
+        mbm.state = false;
+    },
+    toggle: function(status) {
+        if (typeof status !== 'undefined') {
+            status ? mbm.on() : mbm.off();
+        } else {
+            !mbm.state ? mbm.on() : mbm.off();
+        }
+    },
+    init: (function() {
+        if (navigator.userAgent.indexOf('Mobi') > -1) {
+            mbm.on();
+        }
+    }())
+};
 
 // == user interface ==
 var mbmbtn = mw.html.element('div', { id: 'p-mbm' }, 'mbm');
@@ -14,7 +39,7 @@ var mbmvpt = mw.html.element('meta', {
 $('head').append(mbmvpt);
 $('#p-mbm').click(function(toggle) {
     toggle.preventDefault();
-    window.mbmstate = window.mbmstate ? false : true;
+    window.mbm.state = window.mbm.state ? false : true;
     $('.skin-monobook').toggleClass('mbm-on');
 });
 
