@@ -5,11 +5,6 @@ window.mbmstate = window.mbmstate ? true : false;
 // == user interface ==
 var mbmbtn = mw.html.element('div', { id: 'p-mbm' }, 'mbm');
 $('.skin-monobook').append(mbmbtn);
-if (navigator.userAgent.indexOf('Android') > -1) {
-    $('head').append(mw.html.element('meta', { name: 'theme-color', content: dev.colors.wikia.header }));
-} else if (navigator.userAgent.indexOf('iPhone') > -1) {
-    $('head').append(mw.html.element('meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }));
-}
 
 // == responsive design ==
 var mbmvpt = mw.html.element('meta', {
