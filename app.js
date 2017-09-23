@@ -31,6 +31,11 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
         '.skin-monobook.mbm-on #globalWrapper a {' +
             'color: $link;' +
         '}')
+        if (navigator.userAgent.indexOf('Android') > -1) {
+            $('head').append(mw.html.element('meta', { name: 'theme-color', content: dev.colors.wikia.header }));
+        } else if (navigator.userAgent.indexOf('iPhone') > -1) {
+            $('head').append(mw.html.element('meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }));
+        }
     });
 
     // === JS dependencies ===
