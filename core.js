@@ -2,16 +2,19 @@
 // == global variables ==
 window.mbm = {
     state: false,
-    style:  $('link[href$="PortableInfoboxMonobook.scss"]'),
     on: function() {
-        $('.skin-monobook').addClass('mbm-on');
-        mbm.style.detach();
-        mbm.state = true;
+        if (!mbm.state) {
+            $('.skin-monobook').addClass('mbm-on');
+            mbm.style = $('link[href$="PortableInfoboxMonobook.scss"]').detach();
+            mbm.state = true;
+        }
     },
     off: function() {
-        $('.skin-monobook').removeClass('mbm-on');
-        $('meta[name="ResourceLoaderDynamicStyles"]').before(mbm.style);
-        mbm.state = false;
+        if (mbm.state) {
+            $('.skin-monobook').removeClass('mbm-on');
+            $('meta[name="ResourceLoaderDynamicStyles"]').before(mbm.style);
+            mbm.state = false;
+        }
     },
     toggle: function(status) {
         if (typeof status !== 'undefined') {
