@@ -3,8 +3,7 @@
 mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
     if ( skin !== 'monobook') { return }
 
-    // == dependencies ==
-    // === CSS dependencies ===
+    // == interface ==
     mw.hook('dev.colors').add(function(module) {
         dev.colors.css(
         '.skin-monobook.mbm-on {' +
@@ -38,7 +37,7 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
         }
     });
 
-    // === JS dependencies ===
+    // === dependencies ===
     importArticles({
         type: 'script',
         articles: [
