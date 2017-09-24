@@ -14,3 +14,4 @@ This isn't stable yet. Not a mobile skin, just a code experiment on adaptability
   * Article comments
   * User profiles
 * Oasis wiki navigation
+* Single-page application
