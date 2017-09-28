@@ -204,11 +204,13 @@
 .skin-monobook.mbm-on #column-one .portlet .pBody li {
     padding: 0.5em 1em;
 }
-.skin-monobook.mbm-on #column-one .portlet .pBody li:hover {
+.skin-monobook.mbm-on #column-one .portlet .pBody li[id^="pt-"]:hover > a,
+.skin-monobook.mbm-on #column-one .portlet .pBody > ul> li:hover {
     background: hsla(0,0%,50%,0.2);
 }
 .skin-monobook.mbm-on #column-one .portlet .pBody li a:hover {
     background: transparent;
+    text-decoration: none;
 }
 .skin-monobook.mbm-on #column-one .portlet h5:after {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6f/Ic_chevron_right_48px.svg');
@@ -327,14 +329,41 @@
     margin: 0;
 }
 .skin-monobook.mbm-on #column-one #p-personal #wall-notifications-dropdown {
+    background: none !important;
+    border: solid hsla(0, 0%, 0%, 0.2);
+    border-width: 1px 0 0;
+    border-collapse: collapse;
     position: static;
     width: 100%;
+}
+.skin-monobook.mbm-on.page-dark #column-one #p-personal #wall-notifications-dropdown {
+    border: solid hsla(0, 0%, 100%, 0.2);
+    border-width: 1px 0 0;
+}
+.skin-monobook.mbm-on.page-dark #column-one #p-personal #wall-notifications-dropdown td {
+    padding: 0;
 }
 .skin-monobook.mbm-on #p-personal #wall-notifications-dropdown #wall-notifications-inner {
     width: 100%;
 }
+.skin-monobook.mbm-on #p-personal #wall-notifications-dropdown .notifications-header {
+    display: flex;
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+}
+.skin-monobook.mbm-on #p-personal #wall-notifications-dropdown #wall-notifications-markasread {
+    top: 0.5em;
+    right: 0.5em;
+}
 .skin-monobook.mbm-on #p-personal #wall-notifications-dropdown .notification {
     width: calc(100% - 60px)
+}
+.skin-monobook.mbm-on.page-bright #p-personal #wall-notifications-inner li:not(:first-child) {
+    border-top: 1px solid hsla(0, 0%, 0%, 0.2) !important;
+}
+.skin-monobook.mbm-on.page-dark #p-personal #wall-notifications-inner li:not(:first-child) {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.2) !important;
 }
 .skin-monobook.mbm-on #column-one #p-personal li a {
     padding: 0.5em;
