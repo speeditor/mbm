@@ -595,7 +595,7 @@
     overflow: hidden;
 }
 .skin-monobook.mbm-on #mw-content-text pre {
-	word-break: break-word;
+    word-break: break-word;
     white-space: pre-wrap;
 }
 .skin-monobook.mbm-on #mw-content-text .ajax-poll,
@@ -640,7 +640,6 @@
     padding-left: 5px;
 }
 .skin-monobook.mbm-on .wikia-gallery,
-
 .skin-monobook.mbm-on .WikiaPhotoGalleryPreview {
     zoom: 0.6;
 }
@@ -665,12 +664,12 @@
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-description tr,
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-source td,
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-description td {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form .mw-label {
     font-style: italic;
-	text-align: left;
+    text-align: left;
 }
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form legend {
     font-weight: bold;
@@ -680,73 +679,117 @@
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #wpUploadDescription,
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #wpLicense,
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #edittools_wikimarkup {
-	width: 100%;
+    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
 }
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #wpUploadFile {
-	border: none;
+    border: none;
+}
+/** Contributions **/
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table {
+    box-sizing: border-box;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table,
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tbody,
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tr {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table .mw-label {
+    text-align: left;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[type="checkbox"],
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[type="radio"] {
+    height: 1em;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tr:nth-child(n+2) {
+    margin-top: 0.5em;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tr:nth-child(2) td,
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tr:nth-child(4) td {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table span[style] {
+    white-space: normal !important;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[name="target"],
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[name="tagfilter"],
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[name="year"],
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[name="month"] {
+    border-width: 1px;
+    box-sizing: border-box;
+    clear: both;
+    width: 100%;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table #namespace + span {
+    margin-top: -0.5em;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table .mw-submit {
+    clear: both;
+    display: block;
+    margin-top: 1em;
 }
 /** Article history **/
 .skin-monobook.mbm-on.action-history #mw-content-text {
-	display: block;
+    display: block;
 }
 .skin-monobook.mbm-on.action-history .mw-history-legend p span {
-	white-space: normal !important
+    white-space: normal !important
 }
 .skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li {
-	border: 1px solid transparent;
+    border: 1px solid transparent;
     padding: 0.5em;
 }
 .skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li.selected {
-	background-color: hsla(0, 0%, 0%, 0.17);
-	border: 1px dashed currentColor;
+    background-color: hsla(0, 0%, 0%, 0.17);
+    border: 1px dashed currentColor;
 }
 .skin-monobook.mbm-on.action-history.page-dark #mw-history-compare #pagehistory li.selected {
-	background-color: hsla(0, 0%, 100%, 0.17);
+    background-color: hsla(0, 0%, 100%, 0.17);
 }
 .skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li:last-child {
     padding: 0.5em 0.5em 1em;
 }
 .skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory input {
-	height: auto;
+    height: auto;
     margin-top: 0;
 }
 .skin-monobook.mbm-on #mw-content-text table.diff tr {
-	display: flex;
-	flex-flow: column nowrap;
-	align-self: stretch;
-/*	justify-self: stretch; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: stretch;
 }
 .skin-monobook.mbm-on #mw-content-text table.diff,
 .skin-monobook.mbm-on #mw-content-text table.diff tbody {
-	display: flex;
-	flex-flow: column nowrap;	
+    display: flex;
+    flex-flow: column nowrap;
 }
 .skin-monobook.mbm-on #mw-content-text table.diff .diff-lineno ~ .diff-lineno,
 .skin-monobook.mbm-on #mw-content-text table.diff .diff-context ~ .diff-context,
 .skin-monobook.mbm-on #mw-content-text table.diff .diff-marker,
 .skin-monobook.mbm-on #mw-content-text table.diff .diff-empty {
-	display: none;
+    display: none;
 }
 .skin-monobook.mbm-on #mw-content-text table.diff td.diff-addedline:nth-child(2),
 .skin-monobook.mbm-on #mw-content-text table.diff td.diff-deletedline:nth-child(2),
 .skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:nth-child(2) {
-	margin-top: 1em;
+    margin-top: 1em;
 }
 .skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:empty:before {
-	content: ' ';
+    content: ' ';
     line-height: 1em;
 }
 /** Lua console **/
 .skin-monobook.mbm-on #mw-scribunto-console .mw-scribunto-console-fieldset {
-	background: none;
+    background: none;
     color: inherit;
     width: 100%;
     box-sizing: border-box;
 }
 .skin-monobook.mbm-on #mw-scribunto-console #mw-scribunto-output {
-	white-space: pre-wrap;
+    white-space: pre-wrap;
 }
 .skin-monobook.mbm-on #mw-scribunto-console #mw-scribunto-output > * {
     margin: 0;
@@ -756,7 +799,7 @@
     border-bottom: 1px solid currentColor;
 }
 .skin-monobook.mbm-on #mw-scribunto-console .mw-scribunto-message {
-	background: none;
+    background: none;
     padding-top: 0;
 }
 .skin-monobook.mbm-on #mw-scribunto-console .mw-scribunto-error,
