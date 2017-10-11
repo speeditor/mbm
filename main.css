@@ -594,6 +594,10 @@
     max-width: 100%;
     overflow: hidden;
 }
+.skin-monobook.mbm-on #mw-content-text pre {
+	word-break: break-word;
+    white-space: pre-wrap;
+}
 .skin-monobook.mbm-on #mw-content-text .ajax-poll,
 .skin-monobook.mbm-on #mw-content-text .ajax-poll .pollAnswerVotes {
     width: auto;
@@ -640,9 +644,6 @@
 .skin-monobook.mbm-on .WikiaPhotoGalleryPreview {
     zoom: 0.6;
 }
-.skin-monobook.mbm-on #mw-content-text pre {
-    white-space: pre-wrap;
-}
 @media screen and (max-width: 480px) {
 .skin-monobook.mbm-on .wikia-gallery,
 .skin-monobook.mbm-on .WikiaPhotoGalleryPreview {
@@ -685,6 +686,57 @@
 }
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #wpUploadFile {
 	border: none;
+}
+/** Article history **/
+.skin-monobook.mbm-on.action-history #mw-content-text {
+	display: block;
+}
+.skin-monobook.mbm-on.action-history .mw-history-legend p span {
+	white-space: normal !important
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li {
+	border: 1px solid transparent;
+    padding: 0.5em;
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li.selected {
+	background-color: hsla(0, 0%, 0%, 0.17);
+	border: 1px dashed currentColor;
+}
+.skin-monobook.mbm-on.action-history.page-dark #mw-history-compare #pagehistory li.selected {
+	background-color: hsla(0, 0%, 100%, 0.17);
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li:last-child {
+    padding: 0.5em 0.5em 1em;
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory input {
+	height: auto;
+    margin-top: 0;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff tr {
+	display: flex;
+	flex-flow: column nowrap;
+	align-self: stretch;
+/*	justify-self: stretch; */
+}
+.skin-monobook.mbm-on #mw-content-text table.diff,
+.skin-monobook.mbm-on #mw-content-text table.diff tbody {
+	display: flex;
+	flex-flow: column nowrap;	
+}
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-lineno ~ .diff-lineno,
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-context ~ .diff-context,
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-marker,
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-empty {
+	display: none;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-addedline:nth-child(2),
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-deletedline:nth-child(2),
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:nth-child(2) {
+	margin-top: 1em;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:empty:before {
+	content: ' ';
+    line-height: 1em;
 }
 /** Lua console **/
 .skin-monobook.mbm-on #mw-scribunto-console .mw-scribunto-console-fieldset {
