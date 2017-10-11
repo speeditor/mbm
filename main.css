@@ -1,4 +1,5 @@
 /* Monobook Mobile main stylesheet */
+/** Main interface **/
 .skin-monobook.mbm-on {
     zoom: 1.25;
 }
@@ -67,6 +68,18 @@
 .skin-monobook.mbm-on.page-dark #column-one .portlet .pBody {
     color: #fff;
 }
+.skin-monobook.mbm-on.page-bright #column-content textarea,
+.skin-monobook.mbm-on.page-bright #column-content input,
+.skin-monobook.mbm-on.page-bright #column-content select {
+    color: #3a3a3a;
+    border-color: hsla(0,0%,0%,0.2) !important;
+}
+.skin-monobook.mbm-on.page-dark #column-content textarea,
+.skin-monobook.mbm-on.page-dark #column-content input,
+.skin-monobook.mbm-on.page-dark #column-content select {
+    color: #d5d4d4;
+    border-color: hsla(0,0%,100%,0.2) !important;
+}
 .skin-monobook.mbm-on #column-one,
 .skin-monobook.mbm-on #column-one #p-logo,
 .skin-monobook.mbm-on #column-one #p-search,
@@ -95,6 +108,7 @@
     background-color: hsla(0, 0%, 50%, 0.3);
     box-shadow: inset -1px -1px 0 hsla(0, 0%, 50%, 0.1), inset 1px 1px 0px hsla(0, 0%, 50%, 0.1);
 }
+/** Navigation **/
 .skin-monobook.mbm-on #column-one {
     order: 1;
     padding: 0;
@@ -179,9 +193,20 @@
     margin-bottom: 0;
 }
 .skin-monobook.mbm-on #column-one .portlet ul {
+    font-size: 13px;
+    line-height: 1.5em;
     list-style-type: none;
     list-style-image: initial;
     margin: 0;
+}
+.skin-monobook.mbm-on #column-one .portlet br {
+    display: none;
+}
+.skin-monobook.mbm-on #column-one .portlet hr {
+    border-color: currentColor;
+    color: inherit;
+    margin: 0 0.5em;
+    opacity: 0.125;   
 }
 .skin-monobook.mbm-on #column-one .portlet .pBody {
     display: none;
@@ -201,14 +226,21 @@
 .skin-monobook.mbm-on #column-one .portlet h5:first-letter {
     text-transform: uppercase;
 }
-.skin-monobook.mbm-on #column-one .portlet .pBody li {
-    padding: 0.5em 1em;
+.skin-monobook.mbm-on #column-one .portlet .pBody > ul > li {
+    line-height: inherit;
+    padding: 0;
 }
-.skin-monobook.mbm-on #column-one .portlet .pBody li:hover {
-    background: hsla(0,0%,50%,0.2);
+.skin-monobook.mbm-on #column-one .portlet .pBody > ul > li > a {
+    display: block;
+    padding: 0.5em 1em;
+    width: 100%;
+}
+.skin-monobook.mbm-on #column-one .portlet .pBody li[id^="pt-"]:hover > a,
+.skin-monobook.mbm-on #column-one .portlet .pBody > ul> li:hover > a {
+    background: hsla(0, 0%, 50%, 0.2) !important;
 }
 .skin-monobook.mbm-on #column-one .portlet .pBody li a:hover {
-    background: transparent;
+    text-decoration: none;
 }
 .skin-monobook.mbm-on #column-one .portlet h5:after {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6f/Ic_chevron_right_48px.svg');
@@ -283,7 +315,7 @@
 }
 .skin-monobook.mbm-on #column-one #p-cactions h5 {
     display: inline;
-    font-size: 91%;
+    font-size: 95%;
     height: 1em;
 }
 .skin-monobook.mbm-on #column-one #p-cactions li {
@@ -298,7 +330,6 @@
 .skin-monobook.mbm-on #column-one #p-cactions li a {
     background: transparent;
     margin: 0 auto;
-    padding: 0.5em;
 }
 .skin-monobook.mbm-on #column-one #p-personal li[id^="pt-"] {
     display: flex;
@@ -322,19 +353,55 @@
     position: static;
     display: block;
     clear: both;
-    width: 100%;
+    width: auto;
     text-align: center;
     margin: 0;
 }
 .skin-monobook.mbm-on #column-one #p-personal #wall-notifications-dropdown {
+    background: none !important;
+    border: solid hsla(0, 0%, 0%, 0.2);
+    border-width: 1px 0 0;
+    border-collapse: collapse;
     position: static;
     width: 100%;
+}
+.skin-monobook.mbm-on.page-dark #column-one #p-personal #wall-notifications-dropdown {
+    border: solid hsla(0, 0%, 100%, 0.2);
+    border-width: 1px 0 0;
+}
+.skin-monobook.mbm-on.page-dark #column-one #p-personal #wall-notifications-dropdown td {
+    padding: 0;
 }
 .skin-monobook.mbm-on #p-personal #wall-notifications-dropdown #wall-notifications-inner {
     width: 100%;
 }
+.skin-monobook.mbm-on #p-personal #wall-notifications-dropdown .notifications-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75em;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+.skin-monobook.mbm-on #p-personal #wall-notifications-dropdown #wall-notifications-markasread {
+    top: 0.75em;
+    right: -0.25em;
+}
 .skin-monobook.mbm-on #p-personal #wall-notifications-dropdown .notification {
     width: calc(100% - 60px)
+}
+.skin-monobook.mbm-on.page-bright #p-personal #wall-notifications-inner li:not(:first-child),
+.skin-monobook.mbm-on.page-bright #p-personal #wall-notifications-inner .notifications-for-wiki-list {
+    border-top: 1px solid hsla(0, 0%, 0%, 0.2) !important;
+}
+.skin-monobook.mbm-on.page-dark #p-personal #wall-notifications-inner li:not(:first-child),
+.skin-monobook.mbm-on.page-dark #p-personal #wall-notifications-inner .notifications-for-wiki-list {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.2) !important;
+}
+.skin-monobook.mbm-on.page-dark #p-personal #wall-notifications-inner .notifications-wiki-header {
+    background: none;
+    font-size: 1em;
+    padding: 0.5em;
 }
 .skin-monobook.mbm-on #column-one #p-personal li a {
     padding: 0.5em;
@@ -350,6 +417,7 @@
 .skin-monobook.mbm-on #column-one #p-lang {
     order: 5;
 }
+/** Article **/
 .skin-monobook.mbm-on #column-content {
     order: 2;
     float: none;
@@ -395,17 +463,18 @@
     font-weight: bold;
     border-bottom: none;
 }
+/** Footer **/
 .skin-monobook.mbm-on #footer {
     display: flex;
     order: 3;
     flex-direction: row;
     flex-wrap: wrap;
-    /*background-color: #333;*/
     border: none;
     margin: 0;
     padding: 1em;
     text-align: center;
     color: #fff;
+    font-size: inherit;
 }
 .skin-monobook.mbm-on #footer #f-copyrightico,
 .skin-monobook.mbm-on #footer #f-poweredbyico {
@@ -448,6 +517,7 @@
 .skin-monobook.mbm-on #footerlinks a {
     color: #fff;
 }
+/** Content **/
 .skin-monobook.mbm-on #mw-content-text {
     display: flex;
     align-items: center;
@@ -467,11 +537,18 @@
     clear: none !important;
     float: none !important;
 }
+.skin-monobook.mbm-on #mw-content-text .portable-infobox {
+    margin-left: 0;
+    margin-right: 0;
+}
+.skin-monobook.mbm-on #mw-content-text .portable-infobox .pi-title {
+    display: none;
+}
 .skin-monobook.mbm-on #mw-content-text .portable-infobox figure {
-	margin: 0;
+    margin: 0;
 }
 .skin-monobook.mbm-on #mw-content-text .portable-infobox .pi-data-label:not(.pi-horizontal-group-item):not(.pi-smart-data-label) {
-	padding: 0;
+    padding: 0;
 }
 .skin-monobook.mbm-on #mw-content-text > div {
     position: static !important;
@@ -517,6 +594,10 @@
     max-width: 100%;
     overflow: hidden;
 }
+.skin-monobook.mbm-on #mw-content-text pre {
+    word-break: break-word;
+    white-space: pre-wrap;
+}
 .skin-monobook.mbm-on #mw-content-text .ajax-poll,
 .skin-monobook.mbm-on #mw-content-text .ajax-poll .pollAnswerVotes {
     width: auto;
@@ -549,7 +630,7 @@
 }
 .skin-monobook.mbm-on .wikia-slideshow .wikia-slideshow-toolbar {
     padding: 5px;
-    background: hsla(0,0%,50%,0.26); /* TO-DO: replace with accent color */
+    background: hsla(0,0%,50%,0.26);
 }
 .skin-monobook.mbm-on .wikia-slideshow .wikia-slideshow-images .thumbimage {
     height: auto !important;
@@ -559,12 +640,8 @@
     padding-left: 5px;
 }
 .skin-monobook.mbm-on .wikia-gallery,
-/*.skin-monobook.mbm-on .wikia-slideshow-wrapper,*/
 .skin-monobook.mbm-on .WikiaPhotoGalleryPreview {
     zoom: 0.6;
-}
-.skin-monobook.mbm-on #mw-content-text pre {
-    white-space: pre-wrap;
 }
 @media screen and (max-width: 480px) {
 .skin-monobook.mbm-on .wikia-gallery,
@@ -577,4 +654,155 @@
 .skin-monobook.mbm-on .WikiaPhotoGalleryPreview {
     zoom: 0.4;
 }
+}
+/** Uploader **/
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-source,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-description,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-source tbody,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-description tbody,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-source tr,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-description tr,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-source td,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-description td {
+    display: flex;
+    flex-direction: column;
+}
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form .mw-label {
+    font-style: italic;
+    text-align: left;
+}
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form legend {
+    font-weight: bold;
+}
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #wpUploadFile,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #wpDestFile,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #wpUploadDescription,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #wpLicense,
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #edittools_wikimarkup {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #wpUploadFile {
+    border: none;
+}
+/** Contributions **/
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table {
+    box-sizing: border-box;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table,
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tbody,
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tr {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table .mw-label {
+    text-align: left;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[type="checkbox"],
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[type="radio"] {
+    height: 1em;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tr:nth-child(n+2) {
+    margin-top: 0.5em;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tr:nth-child(2) td,
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table tr:nth-child(4) td {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table span[style] {
+    white-space: normal !important;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[name="target"],
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[name="tagfilter"],
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[name="year"],
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table input[name="month"] {
+    border-width: 1px;
+    box-sizing: border-box;
+    clear: both;
+    width: 100%;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table #namespace + span {
+    margin-top: -0.5em;
+}
+.skin-monobook.mbm-on.mw-special-Contributions .mw-contributions-table .mw-submit {
+    clear: both;
+    display: block;
+    margin-top: 1em;
+}
+/** Article history **/
+.skin-monobook.mbm-on.action-history #mw-content-text {
+    display: block;
+}
+.skin-monobook.mbm-on.action-history .mw-history-legend p span {
+    white-space: normal !important
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li {
+    border: 1px solid transparent;
+    padding: 0.5em;
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li.selected {
+    background-color: hsla(0, 0%, 0%, 0.17);
+    border: 1px dashed currentColor;
+}
+.skin-monobook.mbm-on.action-history.page-dark #mw-history-compare #pagehistory li.selected {
+    background-color: hsla(0, 0%, 100%, 0.17);
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li:last-child {
+    padding: 0.5em 0.5em 1em;
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory input {
+    height: auto;
+    margin-top: 0;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff tr {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: stretch;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff,
+.skin-monobook.mbm-on #mw-content-text table.diff tbody {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-lineno ~ .diff-lineno,
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-context ~ .diff-context,
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-marker,
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-empty {
+    display: none;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-addedline:nth-child(2),
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-deletedline:nth-child(2),
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:nth-child(2) {
+    margin-top: 1em;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:empty:before {
+    content: ' ';
+    line-height: 1em;
+}
+/** Lua console **/
+.skin-monobook.mbm-on #mw-scribunto-console .mw-scribunto-console-fieldset {
+    background: none;
+    color: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+.skin-monobook.mbm-on #mw-scribunto-console #mw-scribunto-output {
+    white-space: pre-wrap;
+}
+.skin-monobook.mbm-on #mw-scribunto-console #mw-scribunto-output > * {
+    margin: 0;
+    padding: 0.5em 0;
+}
+.skin-monobook.mbm-on #mw-scribunto-console #mw-scribunto-output > *:not(:last-child) {
+    border-bottom: 1px solid currentColor;
+}
+.skin-monobook.mbm-on #mw-scribunto-console .mw-scribunto-message {
+    background: none;
+    padding-top: 0;
+}
+.skin-monobook.mbm-on #mw-scribunto-console .mw-scribunto-error,
+.skin-monobook.mbm-on #mw-scribunto-console .mw-scribunto-print  {
+    background: none;
 }
