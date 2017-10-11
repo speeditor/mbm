@@ -10,8 +10,14 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
             'background-color: $body;' +
             'background-image: url("/wiki/Special:FilePath/Wiki-background") !important;' +
         '}' +
+        '.skin-monobook.mbm-on #column-content #mbm-bg,' +
+        '.skin-monobook.mbm-on #column-content textarea,' +
+        '.skin-monobook.mbm-on #column-content input,' +
+        '.skin-monobook.mbm-on #column-content select,' +
+        '.skin-monobook.mbm-on.action-edit #column-content #wpTextbox1 {' +
+            'background-color: $page;' +
+        '}' +
         '.skin-monobook.mbm-on #column-content #mbm-bg {' +
-            'background: $page;' +
             'opacity: ' + wgSassParams['page-opacity']/100 + ';' +
         '}' +
         '.skin-monobook.mbm-on #content #firstHeading,' +
@@ -29,6 +35,9 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
         '}' +
         '.skin-monobook.mbm-on #globalWrapper a {' +
             'color: $link;' +
+        '}' +
+        '.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form fieldset {' +
+            'border: 1px solid $link;' +
         '}')
         if (navigator.userAgent.indexOf('Android') > -1) {
             $('head').append(mw.html.element('meta', { name: 'theme-color', content: dev.colors.wikia.header }));
