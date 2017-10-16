@@ -137,6 +137,13 @@
     left: initial;
     overflow: hidden;
 }
+.skin-monobook.mbm-on #column-one #p-logo:after {
+	z-index: -1;
+	content: '';
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
 .skin-monobook.mbm-on #column-one #p-logo a,
 .skin-monobook.mbm-on #column-one #p-logo a:hover {
     height: 36px;
