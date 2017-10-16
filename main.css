@@ -146,11 +146,10 @@
 .skin-monobook.mbm-on #column-one .portlet h5:after {
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.75;
 }
-.skin-monobook.mbm-on.page-dark #p-logo #p-navicon,
-.skin-monobook.mbm-on.page-dark #p-logo #p-schicon,
-.skin-monobook.mbm-on #column-one .portlet h5:after {
+.skin-monobook.mbm-on.header-dark #p-logo #p-navicon,
+.skin-monobook.mbm-on.header-dark #p-logo #p-schicon,
+.skin-monobook.mbm-on.header-dark #column-one .portlet h5:after {
     filter: invert(1);
 }
 .skin-monobook.mbm-on #p-logo #p-navicon,
@@ -268,6 +267,12 @@
 }
 .skin-monobook.mbm-on #column-one #p-search {
     order: 2;
+}
+.skin-monobook.mbm-on #column-one #p-search .pBody {
+    color: #000;
+}
+.skin-monobook.mbm-on.header-dark #column-one #p-search .pBody {
+    color: #fff;
 }
 .skin-monobook.mbm-on #column-one #p-search .pBody {
     border: none;
