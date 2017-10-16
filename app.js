@@ -5,10 +5,10 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
 
     // == interface ==
     mw.hook('dev.colors').add(function(module) {
+        headerText: dev.colors.parse(dev.colors.wikia.header).isBright() ?
+            $(document.body).addClass('header-bright') :
+            $(document.body).addClass('header-dark');
         var customColors = {
-            headerText: dev.colors.parse(dev.colors.wikia.header).isBright() ?
-                '#000000' :
-                '#ffffff',
             headerAlpha: dev.colors.parse(dev.colors.wikia.header).rgb().replace('(','a(').replace(')', ', 0.75)'),
             pageOpacity: wgSassParams['page-opacity']/100
         };
