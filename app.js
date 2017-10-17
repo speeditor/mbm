@@ -72,6 +72,6 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
     
     // == initialisation ==
     importScriptURI('https://rawgit.com/speeditor/mbm/master/core.js');
-    importStylesheetURI('https://rawgit.com/speeditor/mbm/master/main.css');
+    importStylesheetURI('https://rawgit.com/speeditor/mbm/ui-redesigns/main.css');
 
 });
