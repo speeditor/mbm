@@ -12,7 +12,7 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
             headerAlpha: dev.colors.parse(dev.colors.wikia.header).rgb().replace('(','a(').replace(')', ', 0.75)'),
             pageOpacity: wgSassParams['page-opacity']/100
         };
-        var mbmStyles = $(mw.util.addCSS(
+        var mbmStyles = mw.util.addCSS(
             '.skin-monobook.mbm-on {' +
                 'background-color: ' + dev.colors.wikia.body + ';' +
                 'background-image: url("/wiki/Special:FilePath/Wiki-background") !important;' +
@@ -52,8 +52,8 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
             '}' +
             '.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form fieldset {' +
                 'border: 1px solid ' + dev.colors.wikia.link + ';' +
-            '}'));
-        mbmStyles.attr('id', 'mbm-styles');
+            '}');
+        mbmStyles.ownerNode.id = 'mbm-styles';
         if (navigator.userAgent.indexOf('Android') > -1) {
             $('head').append(mw.html.element('meta', { name: 'theme-color', content: dev.colors.wikia.header }));
         } else if (navigator.userAgent.indexOf('iPhone') > -1) {
