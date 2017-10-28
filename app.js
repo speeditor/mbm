@@ -29,6 +29,7 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
             '}' +
             '.skin-monobook.mbm-on #column-one #p-logo,' +
             '.skin-monobook.mbm-on #column-one #p-search .pBody,' +
+            '.skin-monobook.mbm-on #column-one #p-personal .notifications-wiki-count,' +
             '.skin-monobook.mbm-on #column-content #firstHeading,' +
             '.skin-monobook.mbm-on #column-content #siteSub,' +
             '.skin-monobook.mbm-on #column-content #contentSub,' +
