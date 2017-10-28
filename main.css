@@ -418,10 +418,27 @@
 .skin-monobook.mbm-on.page-dark #p-personal #wall-notifications-inner .notifications-for-wiki-list {
     border-top: 1px solid hsla(0, 0%, 100%, 0.2) !important;
 }
-.skin-monobook.mbm-on.page-dark #p-personal #wall-notifications-inner .notifications-wiki-header {
+.skin-monobook.mbm-on #p-personal #wall-notifications-inner .notifications-wiki-header {
     background: none;
-    font-size: 1em;
-    padding: 0.5em;
+    color: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0.5em 0.75em;
+}
+.skin-monobook.mbm-on #p-personal #wall-notifications-inner .notifications-wiki-count {
+    color: #fff;
+}
+.skin-monobook.mbm-on #p-personal #wall-notifications-inner .notifications-for-wiki .chevron {
+    border-color: transparent transparent transparent #3a3a3a;
+}
+.skin-monobook.mbm-on #p-personal #wall-notifications-inner .notifications-for-wiki.show .chevron {
+    border-color: #3a3a3a transparent transparent transparent;
+}
+.skin-monobook.mbm-on.page-dark #p-personal #wall-notifications-inner .notifications-for-wiki .chevron {
+    border-color: transparent transparent transparent #d5d4d4;
+}
+.skin-monobook.mbm-on.page-dark #p-personal #wall-notifications-inner .notifications-for-wiki.show .chevron {
+    border-color: #d5d4d4 transparent #d5d4d4 transparent;
 }
 .skin-monobook.mbm-on #column-one #p-personal li a {
     padding: 0.5em;
@@ -683,6 +700,163 @@
     zoom: 0.4;
 }
 }
+/** Editor **/
+.skin-monobook.mbm-on.action-edit #content #toolbar {
+    border: solid hsla(0, 0%, 0%, 0.2);
+    border-width: 1px 1px 0;
+}
+.skin-monobook.mbm-on.action-edit #content #wpTextbox1 {
+    box-sizing: border-box;
+    border-color: hsla(0, 0%, 0%, 0.2);
+}
+.skin-monobook.mbm-on.action-edit #content #toolbar .mw-toolbar-editbutton {
+    width: 23px;
+    height: 22px;
+    padding: 31px 20px 9px 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.2);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.skin-monobook.mbm-on.action-edit.page-dark #content #toolbar .mw-toolbar-editbutton {
+    border-right: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+.skin-monobook.mbm-on.action-edit.page-dark #content #toolbar {
+    border: solid hsla(0, 0%, 100%, 0.2);
+    border-width: 1px 1px 0;
+}
+.skin-monobook.mbm-on.action-edit.page-dark #content #wpTextbox1 {
+    color: #d5d5d4;
+    border-color: hsla(0, 0%, 100%, 0.2);
+}
+.skin-monobook.mbm-on #mw-editbutton-bold {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/lib/ve/src/ui/styles/images/icons/bold-b.svg');
+}
+.skin-monobook.mbm-on #mw-editbutton-italic {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/lib/ve/src/ui/styles/images/icons/italic-i.svg');
+}
+.skin-monobook.mbm-on #mw-editbutton-link {
+    background-image: url('//images.wikia.nocookie.net/common/resources/lib/oojs-ui/themes/apex/images/icons/link.svg');
+}
+.skin-monobook.mbm-on #mw-editbutton-extlink {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/modules/ve-mw/ui/styles/images/icons/source.svg');
+}
+.skin-monobook.mbm-on #mw-editbutton-headline {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/lib/ve/src/ui/styles/images/icons/text-style.svg');
+}
+.skin-monobook.mbm-on #mw-editbutton-image {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/wikia/modules/ve/ui/styles/images/icons/image.svg');
+}
+.skin-monobook.mbm-on #mw-editbutton-media {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/wikia/modules/ve/ui/styles/images/icons/video.svg');
+}
+.skin-monobook.mbm-on #mw-editbutton-math {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/lib/ve/src/ui/styles/images/icons/superscript.svg');
+}
+.skin-monobook.mbm-on #mw-editbutton-nowiki {
+    background-image: url('//images.wikia.nocookie.net/common/resources/lib/oojs-ui/themes/apex/images/icons/clear.svg');
+}
+.skin-monobook.mbm-on #mw-editbutton-signature {
+    background-image: url('//images.wikia.nocookie.net/speedit/images/7/77/Signature.svg');
+    background-size: 20px;
+}
+.skin-monobook.mbm-on #mw-editbutton-hr {
+    background-image: url('//images.wikia.nocookie.net/common/resources/lib/oojs-ui/themes/apex/images/icons/window.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-bold {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/lib/ve/src/ui/styles/images/icons/bold-b-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-italic {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/lib/ve/src/ui/styles/images/icons/italic-i-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-link {
+    background-image: url('//images.wikia.nocookie.net/common/resources/lib/oojs-ui/themes/apex/images/icons/link-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-extlink {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/modules/ve-mw/ui/styles/images/icons/source-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-headline {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/lib/ve/src/ui/styles/images/icons/text-style-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-image {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/wikia/modules/ve/ui/styles/images/icons/image-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-media {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/wikia/modules/ve/ui/styles/images/icons/video-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-math {
+    background-image: url('//images.wikia.nocookie.net/common/extensions/VisualEditor/lib/ve/src/ui/styles/images/icons/superscript-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-nowiki {
+    background-image: url('//images.wikia.nocookie.net/common/resources/lib/oojs-ui/themes/apex/images/icons/clear-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-signature {
+    background-image: url('//images.wikia.nocookie.net/speedit/images/f/ff/Signature-white.svg');
+}
+.skin-monobook.mbm-on.page-dark #mw-editbutton-hr {
+    background-image: url('//images.wikia.nocookie.net/common/resources/lib/oojs-ui/themes/apex/images/icons/window-white.svg');
+}
+@media only screen and (max-width: 720px) {
+    .skin-monobook.mbm-on.action-edit #content #toolbar .mw-toolbar-editbutton,
+    .skin-monobook.mbm-on.action-edit.page-dark #content #toolbar .mw-toolbar-editbutton {
+        border: none;
+    }
+    .skin-monobook.mbm-on.action-edit #content #toolbar {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    }
+}
+/** History **/
+.skin-monobook.mbm-on.action-history #mw-content-text {
+    display: block;
+}
+.skin-monobook.mbm-on.action-history .mw-history-legend p span {
+    white-space: normal !important
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li {
+    border: 1px solid transparent;
+    padding: 0.5em;
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li.selected {
+    background-color: hsla(0, 0%, 0%, 0.17);
+    border: 1px dashed currentColor;
+}
+.skin-monobook.mbm-on.action-history.page-dark #mw-history-compare #pagehistory li.selected {
+    background-color: hsla(0, 0%, 100%, 0.17);
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li:last-child {
+    padding: 0.5em 0.5em 1em;
+}
+.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory input {
+    height: auto;
+    margin-top: 0;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff tr {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: stretch;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff,
+.skin-monobook.mbm-on #mw-content-text table.diff tbody {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-lineno ~ .diff-lineno,
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-context ~ .diff-context,
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-marker,
+.skin-monobook.mbm-on #mw-content-text table.diff .diff-empty {
+    display: none;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-addedline:nth-child(2),
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-deletedline:nth-child(2),
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:nth-child(2) {
+    margin-top: 1em;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:empty:before {
+    content: ' ';
+    line-height: 1em;
+}
 /** Uploader **/
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-source,
 .skin-monobook.mbm-on.mw-special-Upload #mw-upload-form #mw-htmlform-description,
@@ -758,56 +932,6 @@
     clear: both;
     display: block;
     margin-top: 1em;
-}
-/** Article history **/
-.skin-monobook.mbm-on.action-history #mw-content-text {
-    display: block;
-}
-.skin-monobook.mbm-on.action-history .mw-history-legend p span {
-    white-space: normal !important
-}
-.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li {
-    border: 1px solid transparent;
-    padding: 0.5em;
-}
-.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li.selected {
-    background-color: hsla(0, 0%, 0%, 0.17);
-    border: 1px dashed currentColor;
-}
-.skin-monobook.mbm-on.action-history.page-dark #mw-history-compare #pagehistory li.selected {
-    background-color: hsla(0, 0%, 100%, 0.17);
-}
-.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory li:last-child {
-    padding: 0.5em 0.5em 1em;
-}
-.skin-monobook.mbm-on.action-history #mw-history-compare #pagehistory input {
-    height: auto;
-    margin-top: 0;
-}
-.skin-monobook.mbm-on #mw-content-text table.diff tr {
-    display: flex;
-    flex-flow: column nowrap;
-    align-self: stretch;
-}
-.skin-monobook.mbm-on #mw-content-text table.diff,
-.skin-monobook.mbm-on #mw-content-text table.diff tbody {
-    display: flex;
-    flex-flow: column nowrap;
-}
-.skin-monobook.mbm-on #mw-content-text table.diff .diff-lineno ~ .diff-lineno,
-.skin-monobook.mbm-on #mw-content-text table.diff .diff-context ~ .diff-context,
-.skin-monobook.mbm-on #mw-content-text table.diff .diff-marker,
-.skin-monobook.mbm-on #mw-content-text table.diff .diff-empty {
-    display: none;
-}
-.skin-monobook.mbm-on #mw-content-text table.diff td.diff-addedline:nth-child(2),
-.skin-monobook.mbm-on #mw-content-text table.diff td.diff-deletedline:nth-child(2),
-.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:nth-child(2) {
-    margin-top: 1em;
-}
-.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context:empty:before {
-    content: ' ';
-    line-height: 1em;
 }
 /** Lua console **/
 .skin-monobook.mbm-on #mw-scribunto-console .mw-scribunto-console-fieldset {
