@@ -5,7 +5,7 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
 
     // == interface ==
     mw.hook('dev.colors').add(function(module) {
-        headerText: dev.colors.parse(dev.colors.wikia.header).isBright() ?
+        dev.colors.parse(dev.colors.wikia.header).isBright() ?
             $(document.body).addClass('header-bright') :
             $(document.body).addClass('header-dark');
         var customColors = {
@@ -55,9 +55,9 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
             '}');
         mbmStyles.ownerNode.id = 'mbm-styles';
         if (navigator.userAgent.indexOf('Android') > -1) {
-            $('head').append(mw.html.element('meta', { name: 'theme-color', content: dev.colors.wikia.header }));
+            $(document.head).append(mw.html.element('meta', { name: 'theme-color', content: dev.colors.wikia.header }));
         } else if (navigator.userAgent.indexOf('iPhone') > -1) {
-            $('head').append(mw.html.element('meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }));
+            $(document.head).append(mw.html.element('meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }));
         }
     });
 
