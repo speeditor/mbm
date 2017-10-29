@@ -867,11 +867,16 @@
     display: flex;
     flex-flow: column nowrap;
 }
-.skin-monobook.mbm-on #mw-content-text table.diff .diff-lineno ~ .diff-lineno,
-.skin-monobook.mbm-on #mw-content-text table.diff .diff-context ~ .diff-context,
-.skin-monobook.mbm-on #mw-content-text table.diff .diff-marker,
-.skin-monobook.mbm-on #mw-content-text table.diff .diff-empty {
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-lineno ~ td.diff-lineno,
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context ~ td.diff-context,
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-marker,
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-empty {
     display: none;
+}
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-addedline,
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-deletedline,
+.skin-monobook.mbm-on #mw-content-text table.diff td.diff-context {
+    border-radius: 0;
 }
 .skin-monobook.mbm-on #mw-content-text table.diff td.diff-addedline:nth-child(2),
 .skin-monobook.mbm-on #mw-content-text table.diff td.diff-deletedline:nth-child(2),
