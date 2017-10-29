@@ -58,6 +58,7 @@
     top: 0;
     z-index: 0;
 }
+/* Theming */
 .skin-monobook.mbm-on #content,
 .skin-monobook.mbm-on #content h1,
 .skin-monobook.mbm-on #content h2,
@@ -83,6 +84,24 @@
 .skin-monobook.mbm-on #column-content select {
     color: #3a3a3a;
     border-color: hsla(0,0%,0%,0.2) !important;
+}
+.skin-monobook.mbm-on #column-one .portlet h5,
+.skin-monobook.mbm-on #content .firstHeading,
+.skin-monobook.mbm-on #content #firstHeading,
+.skin-monobook.mbm-on #column-content #siteSub,
+.skin-monobook.mbm-on #column-content #contentSub,
+.skin-monobook.mbm-on #column-content #contentSub2,
+.skin-monobook.mbm-on #footer #lastmod {
+    color: #000;
+}
+.skin-monobook.mbm-on.header-dark #column-one .portlet h5,
+.skin-monobook.mbm-on.header-dark #content .firstHeading,
+.skin-monobook.mbm-on.header-dark #content #firstHeading,
+.skin-monobook.mbm-on.header-dark #column-content #siteSub,
+.skin-monobook.mbm-on.header-dark #column-content #contentSub,
+.skin-monobook.mbm-on.header-dark #column-content #contentSub2,
+.skin-monobook.mbm-on.header-dark #footer #lastmod {
+    color: #fff;
 }
 .skin-monobook.mbm-on.page-dark #column-content textarea,
 .skin-monobook.mbm-on.page-dark #column-content input,
@@ -438,7 +457,7 @@
     border-color: transparent transparent transparent #d5d4d4;
 }
 .skin-monobook.mbm-on.page-dark #p-personal #wall-notifications-inner .notifications-for-wiki.show .chevron {
-    border-color: #d5d4d4 transparent #d5d4d4 transparent;
+    border-color: #d5d4d4 transparent transparent transparent;
 }
 .skin-monobook.mbm-on #column-one #p-personal li a {
     padding: 0.5em;
@@ -472,7 +491,6 @@
 .skin-monobook.mbm-on #content .firstHeading,
 .skin-monobook.mbm-on #content #firstHeading {
     font-weight: bold;
-    color: #fff;
     border: none;
     margin: 0 -14px;
     padding: 14px 14px 4px;
@@ -483,7 +501,6 @@
     display: block;
     margin: 0 -14px;
     padding: 0 14px 14px;
-    color: #fff;
     font-weight: bold;
     font-size: 12px;
 }
@@ -532,17 +549,25 @@
 }
 .skin-monobook.mbm-on #footer #footerlinks {
     display: flex;
-    margin: 0.5em 0;
+    margin: 0;
     text-align: center;
 }
 .skin-monobook.mbm-on #footer #footerlinks ul {
-    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0.5em auto;
 }
 .skin-monobook.mbm-on #footer #footerlinks li {
-    margin: 0 0.5em;
-}
-.skin-monobook.mbm-on #footerlinks a {
-    color: #fff;
+    border-top: 2px solid hsla(0,0%,50%,0.2);
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0.5em 1em;
+    padding-top: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: calc(50% - 2em);
 }
 /** Content **/
 .skin-monobook.mbm-on #mw-content-text {
