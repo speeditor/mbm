@@ -29,7 +29,6 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
             '}' +
             '.skin-monobook.mbm-on #column-one #p-logo,' +
             '.skin-monobook.mbm-on #column-one #p-search .pBody,' +
-            '.skin-monobook.mbm-on #column-one #p-personal .notifications-wiki-count,' +
             '.skin-monobook.mbm-on #column-content #firstHeading,' +
             '.skin-monobook.mbm-on #column-content #siteSub,' +
             '.skin-monobook.mbm-on #column-content #contentSub,' +
@@ -50,6 +49,9 @@ mw.loader.using(['mediawiki.util', 'jquery']).then(function () {
             '}' +
             '.skin-monobook.mbm-on #globalWrapper a {' +
                 'color: ' + dev.colors.wikia.link + ';' +
+            '}' +
+            '.skin-monobook.mbm-on #column-one #p-personal .notifications-wiki-count {' +
+                'background-color: ' + dev.colors.wikia.link + ';' +
             '}' +
             '.skin-monobook.mbm-on.mw-special-Upload #mw-upload-form fieldset {' +
                 'border: 1px solid ' + dev.colors.wikia.link + ';' +
