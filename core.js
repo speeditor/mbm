@@ -1,28 +1,24 @@
 // Monobook Mobile core script
 // == global variables ==
 window.mbm = {
-    state: false,
-    on: function() {
-        if (!mbm.state) {
-            $('.skin-monobook').addClass('mbm-on');
-            mbm.style = $('link[href$="PortableInfoboxMonobook.scss"]').detach();
-            mbm.state = true;
-        }
-    },
-    off: function() {
-        if (mbm.state) {
-            $('.skin-monobook').removeClass('mbm-on');
-            $('meta[name="ResourceLoaderDynamicStyles"]').before(mbm.style);
-            mbm.state = false;
-        }
-    },
-    toggle: function(status) {
-        if (typeof status !== 'undefined') {
-            status ? mbm.on() : mbm.off();
-        } else {
-            !mbm.state ? mbm.on() : mbm.off();
-        }
+    state: false
+};
+mbm.on = function() {
+    if (!mbm.state) {
+        $('.skin-monobook').addClass('mbm-on');
+        mbm.style = $('link[href$="PortableInfoboxMonobook.scss"]').detach();
+        mbm.state = true;
     }
+};
+mbm.off = function() {
+    if (mbm.state) {
+        $('.skin-monobook').removeClass('mbm-on');
+        $('meta[name="ResourceLoaderDynamicStyles"]').before(mbm.style);
+        mbm.state = false;
+    }
+};
+mbm.toggle = function() {
+    !mbm.state ? mbm.on() : mbm.off();
 };
 mbm.init = (function() {
     if (navigator.userAgent.indexOf('Mobi') > -1) {
