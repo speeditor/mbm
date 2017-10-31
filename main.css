@@ -1,5 +1,8 @@
 /* Monobook Mobile main stylesheet */
 /** Main interface **/
+.skin-monobook.mbm-on {
+    zoom: 1.1;
+}
 .skin-monobook #p-mbm {
     display: block;
     background-color: inherit;
