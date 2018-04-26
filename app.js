@@ -182,7 +182,9 @@
             mbm.ui.btn.click(mbm.views.btn);
             mbm.ui.nav.click(mbm.views.nav);
             mbm.ui.sch.click(mbm.views.sch);
-            $(window).resize(mbm.views.rd);
+            // Responsive design handler
+            $(document).ready($.proxy(null, mbm.views.rd, window));
+            $(window).resize($.proxy(null, mbm.views.rd, window));
             // Activate view controllers
             if (mbm.init) mbm.views.on();
         },
@@ -222,7 +224,7 @@
             $('#p-search').toggleClass('is-visible');
             $('#column-one').toggleClass('is-search');
         },
-        rd: function(e) {
+        rd: function(window) {
             if (mbm.init) { return; }
             var dcw = Number(window.document.documentElement.clientWidth),
                 dpr = Number(window.devicePixelRatio),
