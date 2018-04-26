@@ -1,5 +1,13 @@
-// Monobook Mobile main script
-// Main loader script for importing
+/* <nowiki>
+ * 
+ * @module                  MBM.js
+ * @description             Monobook-dependent mobile wrapper for FANDOM websites.
+ * @author                  Speedit
+ * @version                 0.8.0
+ * @license                 CC-BY-SA 3.0
+ * @notes                   Unstable. Not a mobile skin, just a code experiment on adaptability.
+ * 
+ */
 ;(function (window, mw, $) {
 
     // Global variables, double run protection
