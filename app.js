@@ -183,7 +183,7 @@
             mbm.ui.nav.click(mbm.views.nav);
             mbm.ui.sch.click(mbm.views.sch);
             // Responsive design handler
-            $(document).ready(mbm.views.rd));
+            $(document).ready(mbm.views.rd);
             $(window).resize(mbm.views.rd);
             // Activate view controllers
             if (mbm.init) mbm.views.on();
