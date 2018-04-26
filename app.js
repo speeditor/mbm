@@ -31,7 +31,7 @@
                 opacity: mw.config.get('wgSassParams')['page-opacity']/100
             };
             // Import app styling
-            mbm.styles.app = importStylesheetURI('https://rawgit.com/speeditor/mbm/ui-redesigns/main.css');
+            mbm.styles.app = importStylesheetURI('https://rawgit.com/speeditor/mbm/master/main.css');
             // Generate inline styling
             mbm.styles.colors = mw.util.addCSS(
                 '.skin-monobook.mbm-on {' +
