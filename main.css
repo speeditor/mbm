@@ -1,7 +1,7 @@
 /* Monobook Mobile main stylesheet */
 /** Main interface **/
 .skin-monobook.mbm-on {
-    zoom: 1.1;
+    zoom: 1.3;
 }
 .skin-monobook #p-mbm {
     display: block;
@@ -151,24 +151,26 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 40px;
+    padding: 4px;
+    overflow: hidden;
     position: relative;
     top: initial;
     left: initial;
-    overflow: hidden;
+    width: calc(100% - 8px);
 }
 .skin-monobook.mbm-on #column-one #p-logo:after {
-	z-index: -1;
 	content: '';
 	height: 100%;
 	position: absolute;
 	width: 100%;
+	z-index: -1;
 }
 .skin-monobook.mbm-on #column-one #p-logo a,
 .skin-monobook.mbm-on #column-one #p-logo a:hover {
-    height: 36px;
-    width: 140px;
     background-size: contain;
+    height: 36px;
     margin: auto;
+    width: 140px;
 }
 .skin-monobook.mbm-on #p-logo #p-navicon,
 .skin-monobook.mbm-on #p-logo #p-schicon,
@@ -184,8 +186,8 @@
 .skin-monobook.mbm-on #p-logo #p-navicon,
 .skin-monobook.mbm-on #p-logo #p-schicon {
     height: 40px;
-    width: 40px;
     position: absolute;
+    width: 40px;
     z-index: 10;
 }
 .skin-monobook.mbm-on #p-logo #p-navicon {
@@ -332,7 +334,7 @@
 .skin-monobook.mbm-on #column-one #p-logo,
 .skin-monobook.mbm-on #column-one #p-search {
     border: none;
-    border-bottom: 2px solid hsla(0,0%,50%,0.2);
+    border-bottom: 4px solid hsla(0,0%,50%,0.2);
 }
 .skin-monobook.mbm-on #column-one #p-personal {
     order: 3;
@@ -490,6 +492,7 @@
 }
 .skin-monobook.mbm-on #content .firstHeading,
 .skin-monobook.mbm-on #content #firstHeading {
+    font-size: 1.75em;
     font-weight: bold;
     border: none;
     margin: 0 -14px;
@@ -611,14 +614,29 @@
     margin-left: 0;
     margin-right: 0;
 }
-.skin-monobook.mbm-on #mw-content-text .portable-infobox .pi-title {
-    display: none;
-}
 .skin-monobook.mbm-on #mw-content-text .portable-infobox figure {
     margin: 0;
 }
 .skin-monobook.mbm-on #mw-content-text .portable-infobox .pi-data-label:not(.pi-horizontal-group-item):not(.pi-smart-data-label) {
     padding: 0;
+}
+.skin-monobook.mbm-on #mw-content-text .portable-infobox .pi-item-spacing {
+    padding: 10px 14px;
+}
+.skin-monobook.mbm-on #mw-content-text .portable-infobox .pi-group,
+.skin-monobook.mbm-on #mw-content-text .portable-infobox .pi-data {
+    border: none;
+}
+.skin-monobook.mbm-on #mw-content-text > .portable-infobox:first-of-type {
+    order: -1;
+}
+.skin-monobook.mbm-on #mw-content-text > .portable-infobox:first-of-type .pi-title {
+    display: none;
+}
+.skin-monobook.mbm-on #mw-content-text > .portable-infobox:first-of-type {
+    order: -1;
+    margin-top: -1.25em;
+    width: calc(100% + 2em);
 }
 .skin-monobook.mbm-on #mw-content-text > div {
     position: static !important;
@@ -724,6 +742,25 @@
 .skin-monobook.mbm-on .WikiaPhotoGalleryPreview {
     zoom: 0.4;
 }
+}
+.skin-monobook.mbm-on #column-content #catlinks {
+    border: none;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 13px -13px 0;
+    padding: 13px;
+    font-size: 0;
+}
+.skin-monobook.mbm-on #column-content #catlinks ul {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.skin-monobook.mbm-on #column-content #catlinks li {
+    border: none;
+    line-height: 16px;
+}
+.skin-monobook.mbm-on #column-content #catlinks a {
+    font-size: 13px;
 }
 /** Editor **/
 .skin-monobook.mbm-on.action-edit #content #toolbar {
