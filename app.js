@@ -4,7 +4,7 @@
  * @description             Monobook-dependent mobile wrapper for FANDOM websites.
  * @author                  Speedit
  * @version                 0.8.0
- * @license                 CC-BY-SA 3.0
+ * @license                 GNU GPL 2.0
  * @notes                   Unstable. Not a mobile skin, just a code experiment on adaptability.
  * 
  */
