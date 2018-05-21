@@ -1,4 +1,4 @@
-/* <nowiki>
+/** <nowiki>
  * 
  * @module                  MBM.js
  * @description             Monobook-dependent mobile wrapper for FANDOM websites.
